@@ -320,7 +320,7 @@ namecheap.prototype = {
 				options.WebServerType = type;
 				return instance.command('ssl.activate', options, callback, 'POST');
 			},
-			create: function (type, years, code, sta, callback) {
+			create: function (type, years, sta, code, callback) {
 				if (!type)
 					throw new Error('You must include a certificate type.');
 				var y = parseInt(years), params = {Type: type};
