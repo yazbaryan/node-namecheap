@@ -593,7 +593,7 @@ namecheap.prototype = {
       err = body.ApiResponse.Errors.Error;
       res = body.ApiResponse.CommandResponse;
       err = err ? { code : err.Number, message: err.$t } : undefined;
-      res = res ? res[Object.keys(res)[0]] : undefined;
+      res = res ? res[Object.keys(res)[1]] : undefined;
       callback && callback(err, res);
     });
     return this;
